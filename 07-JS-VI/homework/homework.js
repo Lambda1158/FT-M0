@@ -5,11 +5,13 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
   //console.log(a.charAt(0).toUpperCase()+""+(a.split("d")).join(""))
+  //split en string crea un nuevo array a partir del caracter q se le pase
+  //join junta el array en un string con el parametro q se le pase
   var a=nombre.split("")
   a[0]=a[0].toUpperCase()
   a=a.join("")
   return a
-  
+
   
 
 }
@@ -43,6 +45,8 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  //for each modifica el array y lo guarda como este
+
   array.forEach(cb)
   
 }
@@ -52,6 +56,7 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  //map modifica cada miembro y devuelve una funcion
   var a=array.map(cb)
   return a
 }
@@ -60,6 +65,9 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  //array.filter(function(el){
+  // return el[0]==="a"
+  //})
   var a=array.filter(function(element){
     if(element.charAt(0)==="a"){
       return element
